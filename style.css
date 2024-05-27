@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    overflow: hidden;
+    width: 100vw; /* Adjust height as needed */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.object{
+    width:105%;
+    position: absolute;
+    left: -5%;
+    top:-5%;
+}
+#object1{
+    animation: slideDown2 0s forwards;
+}
+#object2{
+    animation: slideDown2 3s forwards;
+}
+#object3{
+    animation: slideDown1 3s forwards;
+}
+#object4{
+    animation: slideDown 6s forwards;
+}
+#object5{
+    animation: slideDown2 0s forwards;
+}
+@keyframes slideDown1 {
+    from {
+        top: 1%;
+    }
+    to {
+        top: -5%;
+    }
+}
+@keyframes slideDown2 {
+    from {
+        top: 3%;
+    }
+    to {
+        top: -5%;
+    }
+}
+@keyframes slideDown {
+    from {
+        top: -40%;
+    }
+    to {
+        top: -5%;
+    }
+}
+
+/* 
+@media screen and (max-width: 2000px) {
+    .object {
+        width: 2300px;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .object {
+        width: 2000px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .object {
+        width: 1700px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .object {
+        width: 1400px;
+    }
+} */
