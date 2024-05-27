@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>images</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <img src="s-0.svg" alt="" data-value="3" class="object" id="object1">
-        <img src="s-1.svg" alt="" data-value="4" class="object" id="object2">
-        <img src="s-2.svg" alt="" data-value="5" class="object" id="object3">
-        <img src="s-3.svg" alt="" data-value="15" class="object" id="object4">
-        <img src="s-4.svg" alt="" data-value="5" class="object" id="object3">
-        <img src="s-5.svg" alt="" data-value="8" class="object" id="object5">
-        <!-- <img src="s-6.svg" alt="" style="top: 0; position: absolute;" width="100%"> -->
+      <img src="s-0.svg" alt="" data-value="3" class="object" id="object1" />
+      <img src="s-1.svg" alt="" data-value="4" class="object" id="object2" />
+      <img src="s-2.svg" alt="" data-value="5" class="object" id="object3" />
+      <img src="s-3.svg" alt="" data-value="15" class="object" id="object4" />
+      <img src="s-4.svg" alt="" data-value="5" class="object" id="object3" />
+      <img src="s-5.svg" alt="" data-value="8" class="object" id="object5" />
+      <!-- <img src="s-6.svg" alt="" style="top: 0; position: absolute;" width="100%"> -->
     </div>
 
     <script type="text/javascript">
+        // Select all elements with the class 'container'
         document.addEventListener("mousemove", parallax);
-        function parallax(e){
-            document.querySelectorAll(".object").forEach(function(move){
-                var moving_value = move.getAttribute("data-value");
-                var x = (e.clientX * moving_value) / 250;
-                var y = (e.clientY * moving_value) / 250;
-                move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
-            });
-        }
+        function parallax(e) {
+        document.querySelectorAll(".object").forEach(function (move) {
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value) / 250;
+            var y = (e.clientY * moving_value) / 250;
+            move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+      }
     </script>
     <div class="site-main-wrapper">
         <button class="hamberger">
@@ -363,5 +364,5 @@
         </footer>
     </div>
 
-</body>
+  </body>
 </html>
