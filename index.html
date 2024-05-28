@@ -9,7 +9,8 @@
   <body>
     <div class="preloader" style=" text-align: center; align-items: center;">
       <h1 style="color:white; font-size: 10vw; margin-top: 40vh;">Welcome</h1>
-      <script>
+    </div>
+    <script>
         // Array of welcome messages in different languages
         const welcomeMessages = [
             "Bienvenido",     // Spanish
@@ -53,7 +54,6 @@
         // Start changing the welcome message after the page loads
         window.onload = changeWelcomeMessage;
     </script>
-    </div>
     <!-- Landing section -->
     <!-- Bk image to maintain the sizing after the header -->
     <div class="container">
@@ -100,6 +100,7 @@
         if (imagesLoaded === images.length) {
             // All images are loaded, hide the preloader
             document.querySelector('.preloader').style.display = 'none';
+            document.addEventListener("mousemove", parallax);
         }
     }
 
