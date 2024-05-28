@@ -35,23 +35,34 @@ body{
     left:-5%;
     top:-5%;
 }
+
 #object4{
     left: 10%;
     width: 55%;
 }
 #object1{
+}
+.as1 {
     animation: slideDown2 0s forwards;
 }
 #object2{
+}
+.as2 {
     animation: slideDown2 3s forwards;
 }
 #object3{
+}
+.as3{
     animation: slideDown1 3s forwards;
 }
 #object4{
+}
+.as4{
     animation: slideDown4 6s forwards;
 }
 #object5{
+}
+.as5{
     animation: slideDown2 0s forwards;
 }
 @keyframes slideDown1 {

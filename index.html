@@ -11,49 +11,49 @@
       <h1 style="color:white; font-size: 10vw; margin-top: 40vh;">Welcome</h1>
     </div>
     <script>
-        // Array of welcome messages in different languages
-        const welcomeMessages = [
-            "Bienvenido",     // Spanish
-            "Bienvenue",      // French
-            "Willkommen",     // German
-            "Benvenuto",      // Italian
-            "Bem-vindo",      // Portuguese
-            "Welkom",         // Dutch
-            "Добро пожаловать",// Russian
-            "欢迎",           // Chinese (Simplified)
-            "ようこそ",       // Japanese
-            "환영합니다",      // Korean
-            "أهلا وسهلا",    // Arabic
-            "स्वागत है",      // Hindi
-            "Καλώς ήρθατε",   // Greek
-            "ברוך הבא",       // Hebrew
-            "Hoş geldiniz",   // Turkish
-            "Välkommen",      // Swedish
-            "Velkommen",      // Danish
-            "Velkommen",      // Norwegian
-            "Tervetuloa",     // Finnish
-            "Witaj",          // Polish
-            "Vítejte",        // Czech
-            "Üdvözöljük",     // Hungarian
-            "Bun venit",      // Romanian
-            "ยินดีต้อนรับ",     // Thai
-            "Chào mừng"       // Vietnamese
-        ];
+      // Array of welcome messages in different languages
+      const welcomeMessages = [
+          "Bienvenido",     // Spanish
+          "Bienvenue",      // French
+          "Willkommen",     // German
+          "Benvenuto",      // Italian
+          "Bem-vindo",      // Portuguese
+          "Welkom",         // Dutch
+          "Добро пожаловать",// Russian
+          "欢迎",           // Chinese (Simplified)
+          "ようこそ",       // Japanese
+          "환영합니다",      // Korean
+          "أهلا وسهلا",    // Arabic
+          "स्वागत है",      // Hindi
+          "Καλώς ήρθατε",   // Greek
+          "ברוך הבא",       // Hebrew
+          "Hoş geldiniz",   // Turkish
+          "Välkommen",      // Swedish
+          "Velkommen",      // Danish
+          "Velkommen",      // Norwegian
+          "Tervetuloa",     // Finnish
+          "Witaj",          // Polish
+          "Vítejte",        // Czech
+          "Üdvözöljük",     // Hungarian
+          "Bun venit",      // Romanian
+          "ยินดีต้อนรับ",     // Thai
+          "Chào mừng"       // Vietnamese
+      ];
 
-        // Function to change the welcome message
-        function changeWelcomeMessage() {
-            const welcomeElement = document.querySelector('.preloader h1');
-            let currentIndex = 0;
+      // Function to change the welcome message
+      function changeWelcomeMessage() {
+          const welcomeElement = document.querySelector('.preloader h1');
+          let currentIndex = 0;
 
-            setInterval(() => {
-                welcomeElement.textContent = welcomeMessages[currentIndex];
-                currentIndex = (currentIndex + 1) % welcomeMessages.length;
-            }, 200); // Change message every 2 seconds
-        }
+          setInterval(() => {
+              welcomeElement.textContent = welcomeMessages[currentIndex];
+              currentIndex = (currentIndex + 1) % welcomeMessages.length;
+          }, 200); // Change message every 2 seconds
+      }
 
-        // Start changing the welcome message after the page loads
-        window.onload = changeWelcomeMessage;
-    </script>
+      // Start changing the welcome message after the page loads
+      window.onload = changeWelcomeMessage;
+  </script>
     <!-- Landing section -->
     <!-- Bk image to maintain the sizing after the header -->
     <div class="container">
@@ -87,33 +87,40 @@
 
     <!-- hiding preloader -->
     <script>
-      
       window.addEventListener('load', function() {
-    // Select all images
-    var images = document.querySelectorAll('img');
-    
-    // Variable to count the number of loaded images
-    var imagesLoaded = 0;
-    // Function to check if all images are loaded
-    function checkAllImagesLoaded() {
-        imagesLoaded++;
-        if (imagesLoaded === images.length) {
-            // All images are loaded, hide the preloader
-            document.querySelector('.preloader').style.display = 'none';
-            document.addEventListener("mousemove", parallax);
-        }
-    }
+          setTimeout(function() {
+              // Select all images
+              var images = document.querySelectorAll('img');
+  
+              // Variable to count the number of loaded images
+              var imagesLoaded = 0;
+  
+              // Function to check if all images are loaded
+              function checkAllImagesLoaded() {
+                  imagesLoaded++;
+                  if (imagesLoaded === images.length) {
+                      // All images are loaded, hide the preloader
+                      document.querySelector('.preloader').style.display = 'none';
+                      document.getElementById("object1").classList.add("as1");
+                      document.getElementById("object2").classList.add("as2");
+                      document.getElementById("object3").classList.add("as3");
+                      document.getElementById("object4").classList.add("as4");
+                      document.getElementById("object5").classList.add("as5");
 
-    // Loop through each image and attach load event listener
-    images.forEach(function(img) {
-        img.addEventListener('load', checkAllImagesLoaded);
-        // In case an image is already cached and loaded before this event listener is attached
-        if (img.complete) {
-            checkAllImagesLoaded();
-        }
-    });
-});
-
-    </script>
+                  }
+              }
+  
+              // Loop through each image and attach load event listener
+              images.forEach(function(img) {
+                  img.addEventListener('load', checkAllImagesLoaded);
+                  // In case an image is already cached and loaded before this event listener is attached
+                  if (img.complete) {
+                      checkAllImagesLoaded();
+                  }
+              });
+          }, 10000); // 10 seconds in milliseconds
+      });
+  </script>
+  
   </body>
 </html>
